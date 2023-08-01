@@ -65,7 +65,46 @@ section .container .middle-content .left{
     justify-content: center;
     
     align-items: center;
+    position: relative;
 }
+
+section .container .middle-content .left::before
+{
+    background-color: red;
+}
+section .container .middle-content .left .infos{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    left: 0;
+    
+}
+section .container .middle-content .left .infos .infos-bloc-left{
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: white;
+    margin-right: 30px;
+    
+}
+
+section .container .middle-content .left .infos .infos-bloc-left span:nth-child(1){
+   font-style: normal;
+   font-weight: bold;
+   font-size: 20px;
+   line-height: 180%
+    
+}
+
+section .container .middle-content .left .infos .infos-bloc-left span:nth-child(2){
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px
+     
+ }
 section  .container .middle-content .right{
     padding-left: 100px;
     
@@ -104,11 +143,16 @@ section .container .middle-content .bloc-button{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 50px;
 }
 section .container .middle-content .bloc-button .book-now{
     padding:10px 20px ;
     justify-content: center;
     align-items: center;
+    background-color: aqua;
+}
+section .container .middle-content .bloc-button .book-now a{
+  color:blueviolet;
 }
 .track-record a{
     color: white;
@@ -116,4 +160,78 @@ section .container .middle-content .bloc-button .book-now{
     font-weight: 600;
     font-size: 15px;
     
+}
+section .container .bottom-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+section .container .bottom-content .all-ghost-btn{
+    height: 90px;
+    width: 190px;
+    justify-content: center;
+    align-items: center;
+    
+}
+section .container .bottom-content .all-ghost-btn a{
+    color: white;
+}
+@media screen and (max-width:1100px){
+    section .container{
+        padding: 20px 50px;
+        
+    }
+    section .container .middle-content{
+        flex-direction: column-reverse;
+        margin-top: 10px;
+        
+    }
+    section  {
+        height: 100%;
+        
+    }
+    section .container .middle-content .right{
+        padding-left: 0px;
+        max-width: 800px;
+        margin-top: 50px;
+        
+    }
+    section .container .middle-content .left{
+  
+        margin-top: 50px;
+        
+    }
+}
+
+@media screen and (max-width:900px){
+    section header{
+        display: none !important;
+        
+    }
+}
+@media screen and (max-width:600px){
+    section  .container .middle-content   .bloc-text h1{
+        font-size: 45px;
+        
+    }
+    section  .container .middle-content   .left img{
+        width: 100%;
+        
+    }
+   
+    section  .container {
+padding:1px 20px;        
+    }
+}
+
+@media screen and (max-width:312px){
+    section .container .right .bloc-text h1{
+        font-size: 3.3rem !important;
+    }
+}
+@media screen and (max-width:1034px){
+    section  .container .middle-content   .left .infos{
+        display: none;
+        
+    }
 }
